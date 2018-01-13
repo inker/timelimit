@@ -1,0 +1,28 @@
+{
+  "name": "timelimit",
+  "version": "1.0.0",
+  "description": "Reject promises on timeout",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf lib && tsc",
+    "build-publish": "sh build/publish.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inker/timelimit"
+  },
+  "keywords": [
+    "timelimit",
+    "timeout",
+    "Promise",
+    "async",
+    "await"
+  ],
+  "author": "Anton Veselyev",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^2.5.2"
+  }
+}
