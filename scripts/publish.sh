@@ -3,7 +3,7 @@
 npm update
 npm run build
 
-VERSION=$(node build/increment-version)
+VERSION=$(node scripts/increment-version)
 echo "new version: $VERSION"
 
 git add .

@@ -15,11 +15,11 @@ const defaultOptions: Options = {
  * instead of new Promise((resolve, reject) => { ... }),
  * use promiseWithTimeout((resolve, reject) => { ... }, timeout, errorMsg)
  */
-export const promiseWithTimeout = <T>(
+export function promiseWithTimeout<T>(
   cb: (resolve: Resolve<T>, reject: Reject) => void,
   timeout: number,
   options?: Options,
-) => {
+) {
   const {
     rejectOnTimeout = defaultOptions.rejectOnTimeout,
     errorMessage = defaultOptions.errorMessage,
@@ -43,7 +43,7 @@ export default <T>(
   promise: Promise<T>,
   timeout: number,
   options?: Options,
-) => promiseWithTimeout(
+) => promiseWithTimeout<T>(
   (resolve, reject) => promise.then(resolve).catch(reject),
   timeout,
   options,
